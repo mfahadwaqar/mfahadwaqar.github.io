@@ -35,8 +35,9 @@
         <a class="nav-brand" href="#top">Muhammad Fahad Waqar</a>
         <nav class="nav-links" aria-label="Primary">
             <a href="#about">About</a>
+            <a href="#focus">Focus</a>
             <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
+            <a href="#projects">Work</a>
             <a href="#contact">Contact</a>
         </nav>
         <a class="btn btn-ghost btn-sm" href="/assets/Muhammad_Fahad_Waqar_Resume.pdf" download>Résumé</a>
@@ -55,9 +56,15 @@
                 MS in Data Science &amp; AI at the Asian Institute of Technology, Bangkok.
             </p>
             <div class="hero-ctas" data-reveal>
-                <a class="btn btn-primary" href="#projects">View projects</a>
+                <a class="btn btn-primary" href="#projects">View work</a>
                 <a class="btn btn-ghost" href="#contact">Get in touch</a>
             </div>
+            <ul class="hero-social" data-reveal aria-label="Profiles">
+                <li><a href="mailto:mfahadwaqar@gmail.com">Email</a></li>
+                <li><a href="https://github.com/mfahadwaqar" target="_blank" rel="noopener">GitHub ↗</a></li>
+                <li><a href="https://www.linkedin.com/in/mfahadwaqar" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+                <li><a href="/assets/Muhammad_Fahad_Waqar_Resume.pdf" download>Résumé ↓</a></li>
+            </ul>
             <div class="hero-scroll" data-reveal><span></span></div>
         </section>
 
@@ -88,9 +95,10 @@
         </section>
 
         <!-- ===== Capabilities ===== -->
-        <section class="section" id="capabilities">
-            <p class="section-kicker" data-reveal>02 — What I do</p>
-            <h2 class="section-title" data-reveal>Capabilities</h2>
+        <section class="section" id="focus">
+            <p class="section-kicker" data-reveal>02 — Focus</p>
+            <h2 class="section-title" data-reveal>What I work on</h2>
+            <p class="section-lede" data-reveal>Applied AI and data systems — built end-to-end, evaluated honestly, run in production.</p>
             <div class="cards-3">
                 <article class="card" data-reveal>
                     <h3>Data Science &amp; ML</h3>
@@ -169,57 +177,86 @@
 
         <!-- ===== University projects ===== -->
         <section class="section" id="projects">
-            <p class="section-kicker" data-reveal>04 — University work</p>
-            <h2 class="section-title" data-reveal>Research &amp; engineering projects</h2>
+            <p class="section-kicker" data-reveal>04 — Selected work</p>
+            <h2 class="section-title" data-reveal>Engineering &amp; ML projects</h2>
+            <p class="section-lede" data-reveal>Coursework, research, and engineering from my MS at AIT and BS at FAST-NUCES.</p>
 
-            <p class="group-label" data-reveal>MS · Data Science &amp; AI — AIT</p>
-            <div class="cards-3">
-                <article class="card" data-reveal>
-                    <h3>Real-Time Log Anomaly Detection Pipeline</h3>
-                    <p>Cloud-native AWS MLOps pipeline for real-time log anomaly detection — streaming ingestion, automated feature engineering, unsupervised models, and rolling retraining with drift monitoring.</p>
-                    <ul class="tags"><li>AWS</li><li>MLOps</li><li>Streaming</li><li>Drift monitoring</li></ul>
-                </article>
-                <article class="card" data-reveal>
-                    <h3>Weekly Options Screener with ML Price Prediction</h3>
-                    <p>Full-stack financial decision support platform for weekly options income strategies — live screening, ML price prediction, backtesting, and portfolio-aware recommendations.</p>
-                    <ul class="tags"><li>ML</li><li>Backtesting</li><li>Full-stack</li></ul>
-                </article>
-                <article class="card" data-reveal>
-                    <h3>Claim Contradiction Detection over Knowledge Graphs</h3>
-                    <p>Multi-stage NLP pipeline combining knowledge graphs, semantic retrieval, NLI filtering, and LLM reasoning to detect intra-document contradictions at scale.</p>
-                    <ul class="tags"><li>NLP</li><li>Knowledge graphs</li><li>LLM</li></ul>
-                </article>
-                <article class="card" data-reveal>
-                    <h3>Hourly Stock Direction Prediction</h3>
-                    <p>Hourly NVIDIA stock direction prediction from multi-source financial data with tree-based models, validated through feature ablation and deployment-aware model selection.</p>
-                    <ul class="tags"><li>Time series</li><li>Tree models</li><li>Feature ablation</li></ul>
-                </article>
-                <article class="card" data-reveal>
-                    <h3>ML-Based Phishing Website Detection</h3>
-                    <p>Production-ready phishing detection on multi-source URL, DNS, and HTML features — near state-of-the-art performance with optimized LightGBM behind a secure FastAPI–SvelteKit stack.</p>
-                    <ul class="tags"><li>LightGBM</li><li>FastAPI</li><li>SvelteKit</li></ul>
-                </article>
-                <article class="card" data-reveal>
-                    <h3>AI-Generated Image Detection</h3>
-                    <p>Traditional ML versus convolutional neural networks for detecting AI-generated images — systematic feature extraction, model training, and comparative evaluation.</p>
-                    <ul class="tags"><li>Computer vision</li><li>CNN</li><li>ML</li></ul>
-                </article>
-                <article class="card" data-reveal>
-                    <h3>Culturally Adaptive AI Advisor for Counseling</h3>
-                    <p>HCI framework using AI-simulated patients and culturally adapted LLM suggestions to assess and improve counselors' cross-cultural competence through controlled user studies.</p>
-                    <ul class="tags"><li>HCI</li><li>LLM</li><li>User studies</li></ul>
-                </article>
-            </div>
-
-            <p class="group-label" data-reveal>BS · Electrical Engineering — FAST-NUCES</p>
-            <div class="cards-3">
-                <article class="card card-featured" data-reveal>
-                    <p class="card-tag">Final year project</p>
-                    <h3>OBD Sentinel</h3>
-                    <p>IoT-based automobile OBD monitoring system: custom hardware plus a mobile app delivering real-time vehicle diagnostics, safety alerts, and cloud-based maintenance analytics. Advised by Dr. Niaz Ahmed.</p>
-                    <ul class="tags"><li>IoT</li><li>Embedded</li><li>Cloud analytics</li><li>Mobile</li></ul>
-                </article>
-            </div>
+            <ol class="worklist" id="worklist">
+                <li class="work" data-reveal>
+                    <span class="work-no">01</span>
+                    <div class="work-body">
+                        <h3 class="work-title">Real-Time Log Anomaly Detection Pipeline</h3>
+                        <p class="work-desc">Cloud-native AWS MLOps pipeline for real-time log anomaly detection — streaming ingestion, automated feature engineering, unsupervised models, and rolling retraining with drift monitoring.</p>
+                        <ul class="tags"><li>AWS</li><li>MLOps</li><li>Streaming</li><li>Drift monitoring</li></ul>
+                        <p class="work-meta">MS · Data Science &amp; AI — AIT</p>
+                    </div>
+                </li>
+                <li class="work" data-reveal>
+                    <span class="work-no">02</span>
+                    <div class="work-body">
+                        <h3 class="work-title">Weekly Options Screener with ML Price Prediction</h3>
+                        <p class="work-desc">Full-stack financial decision support platform for weekly options income strategies — live screening, ML price prediction, backtesting, and portfolio-aware recommendations.</p>
+                        <ul class="tags"><li>ML</li><li>Backtesting</li><li>Full-stack</li></ul>
+                        <p class="work-meta">MS · Data Science &amp; AI — AIT</p>
+                    </div>
+                </li>
+                <li class="work" data-reveal>
+                    <span class="work-no">03</span>
+                    <div class="work-body">
+                        <h3 class="work-title">Claim Contradiction Detection over Knowledge Graphs</h3>
+                        <p class="work-desc">Multi-stage NLP pipeline combining knowledge graphs, semantic retrieval, NLI filtering, and LLM reasoning to detect intra-document contradictions at scale.</p>
+                        <ul class="tags"><li>NLP</li><li>Knowledge graphs</li><li>LLM</li></ul>
+                        <p class="work-meta">MS · Data Science &amp; AI — AIT</p>
+                    </div>
+                </li>
+                <li class="work" data-reveal>
+                    <span class="work-no">04</span>
+                    <div class="work-body">
+                        <h3 class="work-title">Culturally Adaptive AI Advisor for Counseling</h3>
+                        <p class="work-desc">HCI framework using AI-simulated patients and culturally adapted LLM suggestions to assess and improve counselors' cross-cultural competence through controlled user studies.</p>
+                        <ul class="tags"><li>HCI</li><li>LLM</li><li>User studies</li></ul>
+                        <p class="work-meta">MS · Data Science &amp; AI — AIT</p>
+                    </div>
+                </li>
+                <li class="work work-featured" data-reveal>
+                    <span class="work-no">05</span>
+                    <div class="work-body">
+                        <p class="card-tag">Final year project</p>
+                        <h3 class="work-title">OBD Sentinel</h3>
+                        <p class="work-desc">IoT-based automobile OBD monitoring system: custom hardware plus a mobile app delivering real-time vehicle diagnostics, safety alerts, and cloud-based maintenance analytics. Advised by Dr. Niaz Ahmed.</p>
+                        <ul class="tags"><li>IoT</li><li>Embedded</li><li>Cloud analytics</li><li>Mobile</li></ul>
+                        <p class="work-meta">BS · Electrical Engineering — FAST-NUCES</p>
+                    </div>
+                </li>
+                <li class="work is-hidden" data-reveal>
+                    <span class="work-no">06</span>
+                    <div class="work-body">
+                        <h3 class="work-title">Hourly Stock Direction Prediction</h3>
+                        <p class="work-desc">Hourly NVIDIA stock direction prediction from multi-source financial data with tree-based models, validated through feature ablation and deployment-aware model selection.</p>
+                        <ul class="tags"><li>Time series</li><li>Tree models</li><li>Feature ablation</li></ul>
+                        <p class="work-meta">MS · Data Science &amp; AI — AIT</p>
+                    </div>
+                </li>
+                <li class="work is-hidden" data-reveal>
+                    <span class="work-no">07</span>
+                    <div class="work-body">
+                        <h3 class="work-title">AI-Generated Image Detection</h3>
+                        <p class="work-desc">Traditional ML versus convolutional neural networks for detecting AI-generated images — systematic feature extraction, model training, and comparative evaluation.</p>
+                        <ul class="tags"><li>Computer vision</li><li>CNN</li><li>ML</li></ul>
+                        <p class="work-meta">MS · Data Science &amp; AI — AIT</p>
+                    </div>
+                </li>
+                <li class="work is-hidden" data-reveal>
+                    <span class="work-no">08</span>
+                    <div class="work-body">
+                        <h3 class="work-title">ML-Based Phishing Website Detection</h3>
+                        <p class="work-desc">Production-ready phishing detection on multi-source URL, DNS, and HTML features — near state-of-the-art performance with optimized LightGBM behind a secure FastAPI–SvelteKit stack.</p>
+                        <ul class="tags"><li>LightGBM</li><li>FastAPI</li><li>SvelteKit</li></ul>
+                        <p class="work-meta">MS · Data Science &amp; AI — AIT</p>
+                    </div>
+                </li>
+            </ol>
+            <button class="show-more" id="work-toggle" type="button" aria-expanded="false" aria-controls="worklist">Show all work</button>
         </section>
 
         <!-- ===== Personal projects (hidden until content is ready) =====

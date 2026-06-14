@@ -35,6 +35,27 @@
         revealEls.forEach(function (el) { observer.observe(el); });
     }
 
+    // --- Selected work: progressive disclosure ---
+    var workToggle = document.getElementById('work-toggle');
+    var workList = document.getElementById('worklist');
+    if (workToggle && workList) {
+        workToggle.addEventListener('click', function () {
+            var expanded = workToggle.getAttribute('aria-expanded') === 'true';
+            var hidden = workList.querySelectorAll('.work.is-hidden, .work.was-hidden');
+            hidden.forEach(function (el) {
+                if (expanded) {
+                    el.classList.add('is-hidden');
+                    el.classList.remove('was-hidden');
+                } else {
+                    el.classList.remove('is-hidden');
+                    el.classList.add('was-hidden', 'in-view');
+                }
+            });
+            workToggle.setAttribute('aria-expanded', String(!expanded));
+            workToggle.textContent = expanded ? 'Show all work' : 'Show less';
+        });
+    }
+
     // --- Constellation: dot field with proximity links ---
     var canvas = document.getElementById('dots-canvas');
     var ctx = canvas ? canvas.getContext('2d') : null;
@@ -59,7 +80,7 @@
 
     function drawFrame() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        var col = '255, 255, 255';
+        var col = '124, 140, 255';
         var linkDist = 110;
 
         for (var i = 0; i < particles.length; i++) {
