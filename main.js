@@ -56,6 +56,13 @@
         });
     }
 
+    // --- Accent color: read RGB triplet from CSS var (live-updatable) ---
+    function readAccentRGB() {
+        var v = getComputedStyle(document.documentElement).getPropertyValue('--accent-rgb').trim();
+        return v || '124,140,255';
+    }
+    var accentRGB = readAccentRGB();
+
     // --- Constellation: dot field with proximity links ---
     var canvas = document.getElementById('dots-canvas');
     var ctx = canvas ? canvas.getContext('2d') : null;
@@ -80,7 +87,7 @@
 
     function drawFrame() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        var col = '124, 140, 255';
+        var col = accentRGB;
         var linkDist = 110;
 
         for (var i = 0; i < particles.length; i++) {
