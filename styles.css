@@ -101,7 +101,7 @@ img{max-width:100%;display:block}
     border-bottom-color:var(--line);
 }
 .nav-brand{font-family:var(--serif);font-weight:500;font-size:17px;letter-spacing:-.01em}
-.nav-links{display:flex;gap:30px;margin-left:auto;margin-right:32px}
+.nav-links{display:flex;gap:30px;margin-left:auto}
 .nav-links a{font-size:14.5px;color:var(--mut);transition:color var(--dur) var(--ease)}
 .nav-links a:hover{color:var(--accent)}
 @media(max-width:720px){.nav-links{display:none}}
