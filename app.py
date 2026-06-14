@@ -18,6 +18,22 @@ async def get_css():
     """Serve the CSS file"""
     return FileResponse("styles.css", media_type="text/css")
 
+@app.get("/main.js")
+async def get_js():
+    """Serve the JavaScript file"""
+    return FileResponse("main.js", media_type="text/javascript")
+
+
+@app.get("/thread.js")
+async def get_thread_js():
+    """Serve the story thread script"""
+    return FileResponse("thread.js", media_type="text/javascript")
+
+@app.get("/thread.js")
+async def get_thread_js():
+    """Serve the story-thread script"""
+    return FileResponse("thread.js", media_type="text/javascript")
+
 @app.get("/health")
 async def health_check():
     """Health check endpoint"""

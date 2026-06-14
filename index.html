@@ -3,233 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Fahad Waqar</title>
+    <title>Muhammad Fahad Waqar — Data Science &amp; AI</title>
+    <meta name="description" content="Data scientist and data engineer with an electrical engineering backbone. Pipelines, models, and dashboards that hold up in production.">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header-content">
-                <div class="header-text">
-                    <h1 class="name">Muhammad Fahad Waqar</h1>
-                    <p class="subtitle">Data Science - Data Engineer - Electrical Engineer</p>
-                    <p class="bio">
-                        As a Data Science and AI graduate student with a background in Electrical and Computer Engineering, 
-                        I bring a strong foundation in data analysis, predictive modeling, and workflow automation. 
-                        My experience spans developing data pipelines, designing analytical dashboards, and using tools 
-                        like Python and SQL to extract actionable insights. Dedicated to solving real-world challenges 
-                        through innovative, data-driven approaches, I aim to make a meaningful impact at the intersection 
-                        of AI, data engineering, and sustainability.
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Ambient background: drifting orbs + grid + grain -->
+    <div class="bg" aria-hidden="true">
+        <div class="bg-orbs" id="bg-orbs">
+            <div class="orb orb-a"></div>
+            <div class="orb orb-b"></div>
+            <div class="orb orb-c"></div>
+        </div>
+        <div class="bg-grid"></div>
+        <div class="bg-grain"></div>
+    </div>
+
+    <!-- Constellation: accent-tinted dot field built at runtime (main.js) -->
+    <canvas class="dots-canvas" id="dots-canvas" aria-hidden="true"></canvas>
+
+    <header class="nav" id="nav">
+        <a class="nav-brand" href="#top">Muhammad Fahad Waqar</a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-ghost btn-sm" href="/assets/Muhammad_Fahad_Waqar_Resume.pdf" download>Résumé</a>
+    </header>
+
+    <main id="main">
+        <!-- ===== Hero ===== -->
+        <section class="hero" id="top">
+            <p class="eyebrow" data-reveal>Data Science · Data Engineering · AI</p>
+            <h1 class="hero-title" data-reveal>
+                I build systems that turn <em>raw data</em> into <em>working intelligence</em>.
+            </h1>
+            <p class="hero-sub" data-reveal>
+                Data scientist and engineer with an electrical engineering backbone —
+                pipelines, models, and dashboards that hold up in production.
+                MS in Data Science &amp; AI at the Asian Institute of Technology, Bangkok.
+            </p>
+            <div class="hero-ctas" data-reveal>
+                <a class="btn btn-primary" href="#projects">View projects</a>
+                <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+            <div class="hero-scroll" data-reveal><span></span></div>
+        </section>
+
+        <!-- ===== About ===== -->
+        <section class="section" id="about">
+            <p class="section-kicker" data-reveal>01 — About</p>
+            <div class="about-grid">
+                <div class="about-text" data-reveal>
+                    <h2 class="section-title">An engineer first,<br>a data scientist by craft.</h2>
+                    <p>
+                        I started in electrical and computer engineering — circuits, embedded
+                        systems, the unforgiving kind of debugging — and carried that rigor
+                        into data. Since then I've analyzed AI model performance at Motive,
+                        built ETL pipelines and dashboards at SkyElectric, and run projects
+                        end-to-end at Andromeda Technologies.
                     </p>
-                    <div class="contact-info">
-                        <span>Islamabad/Bangkok</span>
-                        <span>mfahadwaqar@gmail.com</span>
-                        <span>+92 343 470 9362/+66 991367596</span>
-                    </div>
-                    <div class="contact-icons">
-                        <a href="mailto:mfahadwaqar@gmail.com" aria-label="Email">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/mfahadwaqar" target="_blank" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/mfahadwaqar" target="_blank" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="/assets/Muhammad_Fahad_Waqar_Resume.pdf" download aria-label="Download CV">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                            </svg>
-                        </a>
-                    </div>
+                    <p>
+                        These days I'm deep in my master's at AIT, working at the intersection
+                        of AI, data engineering, and sustainability — and building things on
+                        the side because I can't help it.
+                    </p>
+                    <p class="about-meta">Islamabad, Pakistan ⇄ Bangkok, Thailand</p>
                 </div>
-                <div class="profile-picture">
-                    <img src="assets/profile.jpg" alt="Muhammad Fahad Waqar" onerror="this.style.display='none'">
+                <div class="about-photo" data-reveal>
+                    <img src="assets/profile.jpg" alt="Portrait of Muhammad Fahad Waqar" loading="lazy" onerror="this.parentElement.style.display='none'">
                 </div>
             </div>
-        </header>
+        </section>
 
-        <main class="content">
-            <section class="section">
-                <h2 class="section-title">Summary</h2>
-                <p class="section-content">
-                    As a Data Science and AI graduate student with a background in Electrical and Computer Engineering, 
-                    I bring a strong foundation in data analysis, predictive modeling, and workflow automation. 
-                    My experience spans developing data pipelines, designing analytical dashboards, and using tools 
-                    like Python and SQL to extract actionable insights. Dedicated to solving real-world challenges 
-                    through innovative, data-driven approaches, I aim to make a meaningful impact at the intersection 
-                    of AI, data engineering, and sustainability.
-                </p>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-content">
-                    <div class="skill-category">
-                        <strong>Programming Languages:</strong> Python, C/C++, SQL, Flutter, HTML, CSS
-                    </div>
-                    <div class="skill-category">
-                        <strong>Libraries:</strong> Pandas, Numpy, TensorFlow, OpenCV, Matplotlib, Keras
-                    </div>
-                    <div class="skill-category">
-                        <strong>Tools:</strong> Git, Bash, Android Studio, Jupyter Notebooks, Vivado, Power BI, 
-                        Tableau, Metabase, MATLAB, Proteus Suite, Office Suite, Adobe Suite
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Experience</h2>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="job-title">Data Analyst, AI</h3>
-                        <span class="company">Motive</span>
-                        <span class="location">Islamabad, Pakistan</span>
-                        <span class="date">March 2025 - August 2025</span>
-                    </div>
-                    <ul class="job-duties">
-                        <li>Explore large datasets with SQL and Python to uncover AI trends and performance issues.</li>
-                        <li>Analyze AI model metrics (accuracy, precision, F1 score) to identify improvement areas.</li>
-                        <li>Design and run A/B tests and experiments to validate AI model changes and support feature development.</li>
-                        <li>Collaborate with QA, Product, and Data teams to support AI improvements and issue resolution.</li>
+        <!-- ===== Capabilities ===== -->
+        <section class="section" id="capabilities">
+            <p class="section-kicker" data-reveal>02 — What I do</p>
+            <h2 class="section-title" data-reveal>Capabilities</h2>
+            <div class="cards-3">
+                <article class="card" data-reveal>
+                    <h3>Data Science &amp; ML</h3>
+                    <p>Predictive modeling, model evaluation, A/B testing, and applied NLP — from notebook to validated result.</p>
+                    <ul class="tags">
+                        <li>Python</li><li>TensorFlow</li><li>Keras</li><li>OpenCV</li><li>Pandas</li><li>NumPy</li>
                     </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="job-title">Project Support Officer</h3>
-                        <span class="company">Andromeda Technologies</span>
-                        <span class="location">Islamabad, Pakistan</span>
-                        <span class="date">December 2024 - March 2025</span>
-                    </div>
-                    <ul class="job-duties">
-                        <li>Tracked milestones and monitored progress for the ATV Network Locking project from a PMO perspective.</li>
-                        <li>Created and maintained project dashboards and Gantt charts to visualize timelines and dependencies.</li>
-                        <li>Coordinated with internal teams and vendors through follow-ups to ensure timely task completion.</li>
-                        <li>Supported end-to-end delivery from requirement confirmation to Google/Netflix certification.</li>
+                </article>
+                <article class="card" data-reveal>
+                    <h3>Data Engineering</h3>
+                    <p>ETL pipelines, database design and optimization, workflow automation, and CI/CD that keeps data moving.</p>
+                    <ul class="tags">
+                        <li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>Linux</li><li>Bash</li><li>Jenkins</li><li>Git</li>
                     </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="job-title">Data Engineer</h3>
-                        <span class="company">SkyElectric</span>
-                        <span class="location">Islamabad, Pakistan</span>
-                        <span class="date">June 2024 - December 2024</span>
-                    </div>
-                    <ul class="job-duties">
-                        <li>Extracted insights using advanced Python data analysis, improving decision-making.</li>
-                        <li>Designed and maintained systems dashboards and data visualizations using Metabase and Power BI.</li>
-                        <li>Managed and optimized PostgreSQL/MySQL databases for efficient storage, retrieval, and performance.</li>
-                        <li>Streamlined ETL processes, automated Linux workflows and managed CI/CD pipelines with Jenkins.</li>
+                </article>
+                <article class="card" data-reveal>
+                    <h3>Analytics &amp; Visualization</h3>
+                    <p>Dashboards and analyses that people actually use — turning model metrics and raw tables into decisions.</p>
+                    <ul class="tags">
+                        <li>Power BI</li><li>Tableau</li><li>Metabase</li><li>Matplotlib</li><li>MATLAB</li>
                     </ul>
-                </div>
+                </article>
+            </div>
+        </section>
 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="job-title">Intern, Digital Technologies</h3>
-                        <span class="company">Zong CMPak</span>
-                        <span class="location">Islamabad, Pakistan</span>
-                        <span class="date">July 2023 - August 2023</span>
+        <!-- ===== Experience ===== -->
+        <section class="section" id="experience">
+            <p class="section-kicker" data-reveal>03 — Track record</p>
+            <h2 class="section-title" data-reveal>Selected experience</h2>
+            <div class="timeline">
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-when">2025</div>
+                    <div class="timeline-body">
+                        <h3>Data Analyst, AI <span class="at">— Motive</span></h3>
+                        <p>Analyzed AI model metrics (accuracy, precision, F1) across large datasets and designed A/B tests to validate model changes and guide feature development.</p>
+                        <ul class="tags"><li>SQL</li><li>Python</li><li>Experimentation</li></ul>
                     </div>
-                    <ul class="job-duties">
-                        <li>Leveraged SQL for efficient database management, data extraction, and query optimization.</li>
-                        <li>Applied data analysis techniques to uncover insights and extract meaningful information from datasets.</li>
-                        <li>Gained hands-on experience in applying machine learning models to solve real-world problems.</li>
-                        <li>Designed data visualizations with Power BI and Tableau, and performed sentiment analysis on textual data.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Education</h2>
-                <div class="education-item">
-                    <h3 class="degree">MS Data Science & Artificial Intelligence</h3>
-                    <div class="education-details">
-                        <span class="institution">Asian Institute of Technology (AIT)</span>
-                        <span class="location">Khlong Luang, Pathum Thani, Thailand</span>
+                </article>
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-when">2024–25</div>
+                    <div class="timeline-body">
+                        <h3>Project Support Officer <span class="at">— Andromeda Technologies</span></h3>
+                        <p>Ran PMO tracking for the ATV Network Locking project end-to-end, from requirements through Google/Netflix certification.</p>
+                        <ul class="tags"><li>PMO</li><li>Dashboards</li><li>Delivery</li></ul>
                     </div>
-                </div>
-                <div class="education-item">
-                    <h3 class="degree">BS Electrical Engineering - Major: Computer Engineering</h3>
-                    <div class="education-details">
-                        <span class="institution">National University of Computer and Emerging Sciences (FAST-NUCES)</span>
-                        <span class="location">Islamabad, Pakistan</span>
+                </article>
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-when">2024</div>
+                    <div class="timeline-body">
+                        <h3>Data Engineer <span class="at">— SkyElectric</span></h3>
+                        <p>Built and streamlined ETL processes, automated Linux workflows with Jenkins CI/CD, and maintained PostgreSQL/MySQL plus Metabase and Power BI dashboards.</p>
+                        <ul class="tags"><li>ETL</li><li>PostgreSQL</li><li>Jenkins</li><li>Power BI</li></ul>
                     </div>
-                    <p class="thesis">Final Year Project: IoT-based Automobile OBD Monitoring System</p>
-                </div>
-            </section>
+                </article>
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-when">2023</div>
+                    <div class="timeline-body">
+                        <h3>Intern, Digital Technologies <span class="at">— Zong CMPak</span></h3>
+                        <p>SQL-driven data extraction and analysis, sentiment analysis on text data, and first hands-on machine learning in production context.</p>
+                        <ul class="tags"><li>SQL</li><li>ML</li><li>Tableau</li></ul>
+                    </div>
+                </article>
+            </div>
 
-            <section class="section">
-                <h2 class="section-title">University Projects</h2>
-                <div class="project-item">
-                    <h3 class="project-title">OBD Sentinel: IoT-based Automobile OBD Monitoring System</h3>
-                    <p class="project-advisor">Advised by: Dr. Niaz Ahmed</p>
-                    <p class="project-description">
-                        Developed an IoT-based OBD Monitoring System with real-time vehicle diagnostics and cloud-based analytics. 
-                        Designed hardware and a mobile app to deliver insights on performance, safety alerts, and maintenance trends.
-                    </p>
+            <div class="edu-row">
+                <div class="edu-card" data-reveal>
+                    <p class="edu-degree">MS Data Science &amp; Artificial Intelligence</p>
+                    <p class="edu-school">Asian Institute of Technology (AIT) · Thailand</p>
                 </div>
-
-                <div class="project-item">
-                    <h3 class="project-title">Facial Expression Detection System using OpenCV and Tensorflow</h3>
-                    <p class="project-description">
-                        Built a real-time system to classify emotions using a pre-trained model and webcam input.
-                    </p>
+                <div class="edu-card" data-reveal>
+                    <p class="edu-degree">BS Electrical Engineering · Computer Engineering major</p>
+                    <p class="edu-school">FAST-NUCES · Islamabad · Dean's Honor List</p>
                 </div>
+            </div>
+        </section>
 
-                <div class="project-item">
-                    <h3 class="project-title">Gesture Recognition System using TinyML</h3>
-                    <p class="project-description">
-                        Deployed an EdgeAI model on Raspberry Pi Pico for customizable hand gesture recognition.
-                    </p>
-                </div>
+        <!-- ===== University projects ===== -->
+        <section class="section" id="projects">
+            <p class="section-kicker" data-reveal>04 — University work</p>
+            <h2 class="section-title" data-reveal>Research &amp; engineering projects</h2>
 
-                <div class="project-item">
-                    <h3 class="project-title">Warehouse Automation Monitoring System Model</h3>
-                    <p class="project-description">
-                        Developed a warehouse automation system with automated control and real-time monitoring capabilities.
-                    </p>
-                </div>
+            <p class="group-label" data-reveal>MS · Data Science &amp; AI — AIT</p>
+            <div class="cards-3">
+                <article class="card" data-reveal>
+                    <h3>Real-Time Log Anomaly Detection Pipeline</h3>
+                    <p>Cloud-native AWS MLOps pipeline for real-time log anomaly detection — streaming ingestion, automated feature engineering, unsupervised models, and rolling retraining with drift monitoring.</p>
+                    <ul class="tags"><li>AWS</li><li>MLOps</li><li>Streaming</li><li>Drift monitoring</li></ul>
+                </article>
+                <article class="card" data-reveal>
+                    <h3>Weekly Options Screener with ML Price Prediction</h3>
+                    <p>Full-stack financial decision support platform for weekly options income strategies — live screening, ML price prediction, backtesting, and portfolio-aware recommendations.</p>
+                    <ul class="tags"><li>ML</li><li>Backtesting</li><li>Full-stack</li></ul>
+                </article>
+                <article class="card" data-reveal>
+                    <h3>Claim Contradiction Detection over Knowledge Graphs</h3>
+                    <p>Multi-stage NLP pipeline combining knowledge graphs, semantic retrieval, NLI filtering, and LLM reasoning to detect intra-document contradictions at scale.</p>
+                    <ul class="tags"><li>NLP</li><li>Knowledge graphs</li><li>LLM</li></ul>
+                </article>
+                <article class="card" data-reveal>
+                    <h3>Hourly Stock Direction Prediction</h3>
+                    <p>Hourly NVIDIA stock direction prediction from multi-source financial data with tree-based models, validated through feature ablation and deployment-aware model selection.</p>
+                    <ul class="tags"><li>Time series</li><li>Tree models</li><li>Feature ablation</li></ul>
+                </article>
+                <article class="card" data-reveal>
+                    <h3>ML-Based Phishing Website Detection</h3>
+                    <p>Production-ready phishing detection on multi-source URL, DNS, and HTML features — near state-of-the-art performance with optimized LightGBM behind a secure FastAPI–SvelteKit stack.</p>
+                    <ul class="tags"><li>LightGBM</li><li>FastAPI</li><li>SvelteKit</li></ul>
+                </article>
+                <article class="card" data-reveal>
+                    <h3>AI-Generated Image Detection</h3>
+                    <p>Traditional ML versus convolutional neural networks for detecting AI-generated images — systematic feature extraction, model training, and comparative evaluation.</p>
+                    <ul class="tags"><li>Computer vision</li><li>CNN</li><li>ML</li></ul>
+                </article>
+                <article class="card" data-reveal>
+                    <h3>Culturally Adaptive AI Advisor for Counseling</h3>
+                    <p>HCI framework using AI-simulated patients and culturally adapted LLM suggestions to assess and improve counselors' cross-cultural competence through controlled user studies.</p>
+                    <ul class="tags"><li>HCI</li><li>LLM</li><li>User studies</li></ul>
+                </article>
+            </div>
 
-                <div class="project-item">
-                    <h3 class="project-title">Building an Operating System using Linux</h3>
-                    <p class="project-description">
-                        Developed a minimal Linux OS with BusyBox and a command-line interface.
-                    </p>
-                </div>
+            <p class="group-label" data-reveal>BS · Electrical Engineering — FAST-NUCES</p>
+            <div class="cards-3">
+                <article class="card card-featured" data-reveal>
+                    <p class="card-tag">Final year project</p>
+                    <h3>OBD Sentinel</h3>
+                    <p>IoT-based automobile OBD monitoring system: custom hardware plus a mobile app delivering real-time vehicle diagnostics, safety alerts, and cloud-based maintenance analytics. Advised by Dr. Niaz Ahmed.</p>
+                    <ul class="tags"><li>IoT</li><li>Embedded</li><li>Cloud analytics</li><li>Mobile</li></ul>
+                </article>
+            </div>
+        </section>
 
-                <div class="project-item">
-                    <h3 class="project-title">Logic Based Light Following Car</h3>
-                    <p class="project-description">
-                        Designed a robot that follows a path of light using digital logic and logic gates.
-                    </p>
-                </div>
-            </section>
+        <!-- ===== Personal projects (hidden until content is ready) =====
+        <section class="section section-personal" id="personal">
+            <p class="section-kicker" data-reveal>05 — Off the clock</p>
+            <h2 class="section-title" data-reveal>Personal projects</h2>
+            <p class="section-lede" data-reveal>Things I build for fun, outside coursework and contracts.</p>
+            <div class="cards-3">
+                Add personal projects here: <article class="card card-personal"> blocks
+                with <p class="card-index">№ 01</p>, h3, description, and tags.
+            </div>
+        </section>
+        -->
 
-            <section class="section">
-                <h2 class="section-title">Achievements</h2>
-                <ul class="achievements-list">
-                    <li>Huawei ICT Competition: 3 time National Finalist (2021, 2022, 2023)</li>
-                    <li>Dean's Honor List at FAST-NUCES (Fall 2023)</li>
-                    <li>Fast Engineering Society: Head Team Technical Writing (2023), Coordinator Team Seminars (2022)</li>
-                    <li>IEEE FAST Student Chapter: Coordinator Team Technical Writing (2023)</li>
-                    <li>ISYWSC 22': Member Team Media (2022)</li>
-                    <li>Usher: Openhouse 22', FAST-NUCES Islamabad</li>
-                </ul>
-            </section>
-        </main>
-    </div>
+        <!-- ===== Contact ===== -->
+        <section class="section contact" id="contact">
+            <p class="section-kicker" data-reveal>05 — Contact</p>
+            <h2 class="contact-title" data-reveal>Let's build something<br>with <em>data</em>.</h2>
+            <p class="contact-sub" data-reveal>Open to data science, data engineering, and AI roles — or a good conversation about any of them.</p>
+            <div class="hero-ctas" data-reveal>
+                <a class="btn btn-primary" href="mailto:mfahadwaqar@gmail.com">mfahadwaqar@gmail.com</a>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/mfahadwaqar" target="_blank" rel="noopener">LinkedIn ↗</a>
+                <a class="btn btn-ghost" href="https://github.com/mfahadwaqar" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <p class="contact-meta" data-reveal>+92 343 470 9362 · +66 99 136 7596 · Islamabad / Bangkok</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year">2026</span> Muhammad Fahad Waqar</p>
+        <div class="footer-links">
+            <a href="/assets/Muhammad_Fahad_Waqar_Resume.pdf" download>Résumé</a>
+            <a href="https://www.linkedin.com/in/mfahadwaqar" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/mfahadwaqar" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:mfahadwaqar@gmail.com">Email</a>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
-

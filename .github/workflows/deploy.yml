@@ -39,7 +39,7 @@ jobs:
           exclude_assets: |
             app.py
             requirements.txt
-            README.md
+            *.md
             .git
             .github
             node_modules
